@@ -20,7 +20,10 @@ app.use(express.json());
 app.use(express.urlencoded({extends:true}));
 app.use(morgan('dev'));
 //cargar un archivo estatico
-app.use(express.static(path.join(__dirname,'../public')));
-// console.log(path.join(__dirname,'../public'));
-
+app.use(express.static(path.join(__dirname, '../public')));
+//console.log(path.join(__dirname, '../public'));
 //rutas
+//http://localhost:4000/prueba
+app.get('/prueba',(req,res)=>{
+    res.send('esto es una prueba de una peticion get')
+}) 
