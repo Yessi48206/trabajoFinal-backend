@@ -21,7 +21,7 @@ app.use(express.urlencoded({extends:true}));
 app.use(morgan('dev'));
 //cargar un archivo estatico
 app.use(express.static(path.join(__dirname, '../public')));
-console.log(path.join(__dirname, '../public'));
+//console.log(path.join(__dirname, '../public'));
 
 //rutas
 //http://localhost:4000/prueba
