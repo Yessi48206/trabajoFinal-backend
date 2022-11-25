@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import path from 'path';
 import './database';
+import usuarioRouter from './routes/usuarios.routes'
 
 //crear una instancia de express
 const app =express();
@@ -24,7 +25,5 @@ app.use(express.static(path.join(__dirname, '../public')));
 //console.log(path.join(__dirname, '../public'));
 
 //rutas
-//http://localhost:4000/prueba
-app.get('/prueba',(req,res)=>{
-    res.send('esto es una prueba de una peticion get')
-}) 
+//http://localhost:4000/apisbrooks/usuario
+app.use('/apisbrooks/usuario',usuarioRouter);
